@@ -28,5 +28,10 @@ namespace dotextensions
     {
       return !string.IsNullOrEmpty(str) && values.Any() && values.Any(str.Contains);
     }
+    
+    public static bool Contains(this string str, string toCheck, StringComparison comp) 
+    {
+      return str.IndexOf(toCheck, comp) >= 0;
+    }
   }
 }
